@@ -15,7 +15,7 @@ module.exports = {
       url: 'https://www.linkedin.com/in/anoopkumar1119',
     },
     {
-      name: '',
+      name: 'Globe',
       url: 'https://thengakulatechs.github.io',
     },
   ],
