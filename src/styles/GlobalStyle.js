@@ -3,6 +3,7 @@ import fonts from './fonts';
 import variables from './variables';
 import TransitionStyles from './TransitionStyles';
 import PrismStyles from './PrismStyles';
+import bg from '../images/bg.svg';
 
 const GlobalStyle = createGlobalStyle`
   ${fonts};
@@ -109,6 +110,19 @@ const GlobalStyle = createGlobalStyle`
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 100%;
+
+    ::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: url('${bg}');
+      opacity: 0.5;
+      pointer-events: none;
+      z-index: 0;
+    }
   }
 
   main {
