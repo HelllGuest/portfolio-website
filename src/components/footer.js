@@ -41,7 +41,7 @@ const StyledSocialLinks = styled.div`
 
 const StyledCredit = styled.div`
   color: var(--light-slate);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono), serif;
   font-size: var(--fz-xxs);
   line-height: 1;
 
@@ -81,7 +81,10 @@ const Footer = () => (
     </StyledSocialLinks>
 
     <StyledCredit tabindex="-1">
-      <a href="https://github.com/HelllGuest/portfolio-website" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://github.com/HelllGuest/portfolio-website"
+        target="_blank"
+        rel="noopener noreferrer">
         <div>Anoop Kumar's Gatsby Portfolio</div>
       </a>
       {'|'}

@@ -117,15 +117,17 @@ const StyledProject = styled.li`
 
   .project-overline {
     margin: 10px 0;
-    color: var(--green);
-    font-family: var(--font-mono);
+    color: var(--highlight);
+    font-family: var(--font-mono), serif;
     font-size: var(--fz-xs);
     font-weight: 400;
   }
 
   .project-title {
     color: var(--lightest-slate);
-    font-size: clamp(24px, 5vw, 28px);
+    font-size: clamp(20px, 5vw, 24px);
+    font-family: var(--font-title), serif;
+    font-weight: 400;
 
     @media (min-width: 768px) {
       margin: 0 0 20px;
@@ -256,7 +258,7 @@ const StyledProject = styled.li`
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--green);
+      background-color: var(--highlight);
       border-radius: var(--border-radius);
       vertical-align: middle;
 

@@ -16,8 +16,8 @@ const StyledContactSection = styled.section`
   .overline {
     display: block;
     margin-bottom: 20px;
-    color: var(--green);
-    font-family: var(--font-mono);
+    color: var(--highlight);
+    font-family: var(--font-mono), serif;
     font-size: var(--fz-md);
     font-weight: 400;
 
@@ -32,12 +32,15 @@ const StyledContactSection = styled.section`
   }
 
   .title {
-    font-size: clamp(40px, 5vw, 60px);
+    font-size: clamp(30px, 5vw, 50px);
+    font-family: var(--font-title), serif;
+    font-weight: 600;
+    margin: 40px 0;
   }
 
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
-    margin-top: 50px;
+    margin-top: 30px;
   }
 `;
 

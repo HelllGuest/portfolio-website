@@ -32,18 +32,21 @@ const StyledText = styled.div`
       position: relative;
       margin-bottom: 10px;
       padding-left: 20px;
-      font-family: var(--font-mono);
+      font-family: var(--font-mono), serif;
       font-size: var(--fz-xs);
 
       &:before {
         content: '▹';
         position: absolute;
         left: 0;
-        color: var(--green);
+        color: var(--dark-slate);
         font-size: var(--fz-sm);
         line-height: 12px;
       }
     }
+  }
+  .highlight {
+    color: var(--dark-slate);
   }
 `;
 const StyledPic = styled.div`
@@ -61,7 +64,7 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    background-color: var(--highlight);
 
     &:hover,
     &:focus {
@@ -105,7 +108,7 @@ const StyledPic = styled.div`
     }
 
     &:after {
-      border: 2px solid var(--green);
+      border: 2px solid var(--dark-slate);
       top: 14px;
       left: 14px;
       z-index: -1;

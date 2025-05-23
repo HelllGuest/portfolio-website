@@ -18,9 +18,9 @@ const StyledHeroSection = styled.section`
   }
 
   h1 {
-    margin: 0 0 30px 4px;
-    color: var(--green);
-    font-family: var(--font-mono);
+    margin: 0 0 20px 4px;
+    color: var(--highlight);
+    font-family: var(--font-mono), serif;
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
 
@@ -30,9 +30,8 @@ const StyledHeroSection = styled.section`
   }
 
   h3 {
-    margin-top: 5px;
+    margin: 10px 0;
     color: var(--slate);
-    line-height: 0.9;
   }
 
   p {
@@ -42,7 +41,7 @@ const StyledHeroSection = styled.section`
 
   .email-link {
     ${({ theme }) => theme.mixins.bigButton};
-    margin-top: 50px;
+    margin-top: 30px;
   }
 `;
 
@@ -59,9 +58,13 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Anoop Kumar</h2>;
-  const three = <h3 className="big-heading">Designer | Developer | Gamer</h3>;
+  const one = <h1>Hello, my name is</h1>;
+  const two = (
+    <div className="big-heading">
+      <span className="big-heading highlight">Anoop</span> <span>Kumar</span>
+    </div>
+  );
+  const three = <h3 className="heading">Designer | Developer | Gamer</h3>;
   const four = (
     <>
       <p>

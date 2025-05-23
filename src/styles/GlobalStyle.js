@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* Provide basic, default focus styles.*/
   :focus {
-    outline: 2px dashed var(--green);
+    outline: 2px dashed var(--highlight);
     outline-offset: 3px;
   }
 
@@ -47,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
     focus.
   */
   :focus-visible {
-    outline: 2px dashed var(--green);
+    outline: 2px dashed var(--highlight);
     outline-offset: 3px;
   }
 
@@ -77,7 +77,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background-color: var(--navy);
     color: var(--slate);
-    font-family: var(--font-sans);
+    font-family: var(--font-sans), serif;
     font-size: var(--fz-xl);
     line-height: 1.3;
 
@@ -152,7 +152,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0 50px;
       }
       @media (max-width: 480px) {
-        padding: 0 25px;
+        padding: 25px 25px 0;
       }
     }
   }
@@ -185,7 +185,20 @@ const GlobalStyle = createGlobalStyle`
 
   .big-heading {
     margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(30px,8vw,60px);
+    font-family: var(--font-title), serif;
+    font-weight: 600;
+
+    .highlight{
+      color: var(--dark-slate);
+    }
+  }
+
+  .heading {
+    margin:  0;
+    font-size: clamp(10px,5vw,30px);
+    font-family: var(--font-title), serif;
+    font-weight: 400;
   }
 
   .medium-heading {
@@ -201,15 +214,16 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     font-size: clamp(26px, 5vw, var(--fz-heading));
     white-space: nowrap;
+    font-family: var(--font-title), serif;
 
     &:before {
       position: relative;
       bottom: 4px;
       counter-increment: section;
-      content: '0' counter(section) '.';
+      content: '>>';
       margin-right: 10px;
-      color: var(--green);
-      font-family: var(--font-mono);
+      color: var(--highlight);
+      font-family: var(--font-mono), serif;
       font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
       font-weight: 400;
 
@@ -275,11 +289,12 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: var(--green);
+      color: var(--highlight);
     }
 
     &.inline-link {
       ${({ theme }) => theme.mixins.inlineLink};
+      margin-left: 5px;
     }
   }
 
@@ -339,14 +354,14 @@ const GlobalStyle = createGlobalStyle`
           content: '▹';
           position: absolute;
           left: 0;
-          color: var(--green);
+          color: var(--highlight);
         }
       }
     }
   }
 
   blockquote {
-    border-left-color: var(--green);
+    border-left-color: var(--highlight);
     border-left-style: solid;
     border-left-width: 1px;
     margin-left: 0px;
@@ -370,7 +385,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   code {
-    font-family: var(--font-mono);
+    font-family: var(--font-mono), serif;
     font-size: var(--fz-md);
   }
 
@@ -386,7 +401,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      background-color: var(--green);
+      background-color: var(--highlight);
       color: var(--navy);
       top: 0;
       left: 0;
@@ -400,21 +415,21 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #logo {
-    color: var(--green);
+    color: var(--highlight);
   }
 
   .overline {
-    color: var(--green);
-    font-family: var(--font-mono);
+    color: var(--highlight);
+    font-family: var(--font-mono), serif;
     font-size: var(--fz-md);
     font-weight: 400;
   }
 
   .subtitle {
-    color: var(--green);
+    color: var(--highlight);
     margin: 0 0 20px 0;
     font-size: var(--fz-md);
-    font-family: var(--font-mono);
+    font-family: var(--font-mono), serif;
     font-weight: 400;
     line-height: 1.5;
     @media (max-width: 1080px) {
@@ -434,7 +449,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     margin-bottom: 50px;
-    color: var(--green);
+    color: var(--highlight);
 
     .arrow {
       display: block;
@@ -444,7 +459,7 @@ const GlobalStyle = createGlobalStyle`
 
     a {
       ${({ theme }) => theme.mixins.inlineLink};
-      font-family: var(--font-mono);
+      font-family: var(--font-mono), serif;
       font-size: var(--fz-sm);
       font-weight: 600;
       line-height: 1.5;

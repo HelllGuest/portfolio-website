@@ -10,7 +10,7 @@ const StyledMainContainer = styled.main`
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <ProgressBar bgcolor="#64ffda" />
+    <ProgressBar bgcolor="#d91656" />
     <StyledMainContainer className="fillHeight">
       <Hero />
       <About />
