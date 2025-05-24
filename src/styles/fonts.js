@@ -109,15 +109,17 @@ const createFontFaces = (family, style = 'normal') => {
   for (const [weight, formats] of Object.entries(family[style])) {
     const woff = formats[0];
     const woff2 = formats[1];
+    const ttf = formats[2];
 
     styles += `
       @font-face {
         font-family: '${family.name}';
         src: url(${woff2}) format('woff2'),
-            url(${woff}) format('woff');
+            url(${woff}) format('woff'),
+            url(${ttf}) format('truetype');
         font-weight: ${weight};
         font-style: ${style};
-        font-display: auto;
+        font-display: swap;
       }
     `;
   }
