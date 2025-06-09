@@ -2,7 +2,7 @@
 date: '2023-09-01'
 title: 'Some Python Scripts'
 github: 'https://github.com/HelllGuest/python_scripts'
-external: ''
+external: 'https://github.com/HelllGuest/python_scripts'
 tech:
   - Python
   - Firewall
